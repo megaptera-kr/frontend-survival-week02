@@ -8,7 +8,7 @@ export default function App() {
     setCount(count + value);
   };
 
-  const c = createElement
+  const c = createElement;
 
   const makeList = () => [1, 2, 3, 4, 5].map((i) => (
     c(

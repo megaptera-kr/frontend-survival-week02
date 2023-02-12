@@ -44,10 +44,10 @@ export default function App() {
         {
           key: i,
           type: 'button',
-          onClick: () => handleClick(i)
+          onClick: () => handleClick(i),
         },
-        '+', 
-        i
+        '+',
+        i,
       )),
     )
   );

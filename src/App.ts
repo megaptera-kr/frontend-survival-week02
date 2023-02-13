@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 
 import Greeting from './components/Greeting';
 
@@ -20,11 +20,13 @@ export default function App() {
   };
 
   return (
-    React.createElement('div', {},
+    React.createElement(
+      'div',
+      {},
       React.createElement(Greeting, { name: 'wholeman' }),
-      React.createElement(Image, { src: "/images/test.jpg", alt: "Test Image", width: 200 }),
+      React.createElement(Image, { src: '/images/test.jpg', alt: 'Test Image', width: 200 }),
       React.createElement('p', {}, 'Count:', ' ', count),
-      ...[1, 2, 3, 4, 5].map((i) => React.createElement('button', { key: i, type: "button", onClick: () => handleClick(i) }, `+${i}`))
+      ...[1, 2, 3, 4, 5].map((i) => React.createElement('button', { key: i, type: 'button', onClick: () => handleClick(i) }, `+${i}`)),
     )
   );
 }

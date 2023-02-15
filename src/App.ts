@@ -28,7 +28,7 @@ export default function App() {
       alt: 'Test Image',
       width: 200,
     }),
-    React.createElement('p', null, 'Count:', count),
+    React.createElement('p', null, 'Count: ', count),
     [1, 2, 3, 4, 5].map((i) => React.createElement(
       'button',
       {

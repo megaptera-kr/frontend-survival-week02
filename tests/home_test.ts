@@ -32,4 +32,8 @@ Scenario('Counter test', ({ I }) => {
   I.click('+3');
 
   I.see('Count: 15');
+
+  I.click('+3');
+
+  I.see('Count: 18');
 });

@@ -1,9 +1,10 @@
 {
-  "editor.rulers": [
-      80
-  ],
+  "editor.rulers": [80],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+
+  "files.insertFinalNewline": true,
+
   "trailing-spaces.trimOnSave": true
 }

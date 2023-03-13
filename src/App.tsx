@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 
 import Greeting from './components/Greeting';
 
@@ -9,13 +9,11 @@ type ImageProps = {
 }
 
 function Image({ src, alt = '', width }: ImageProps) {
-  return (
-    <img src={src} alt={alt} width={width ?? 'auto'} />
-  );
+  return React.createElement('img', { src, alt, width: width ?? 'auto' });
 }
 
 export default function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = React.useState(0);
 
   const handleClick = (value: number) => {
     setCount(count + value);

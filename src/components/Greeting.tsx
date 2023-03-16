@@ -1,12 +1,5 @@
-export default function Greeting({ name }: {
-  name: string;
-}) {
-  return (
-    <p>
-      Hello,
-      {' '}
-      {name}
-      !
-    </p>
-  );
+import React from 'react';
+
+export default function Greeting({ name }: { name: string }) {
+  return React.createElement('p', null, 'Hello,', ' ', name, '!');
 }

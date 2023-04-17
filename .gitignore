@@ -132,3 +132,6 @@ dist
 # SWC
 /.swc/
 node_modules
+
+# idea
+.idea

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import Greeting from './components/Greeting';
 
 type ImageProps = {

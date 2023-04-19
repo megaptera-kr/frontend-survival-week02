@@ -33,3 +33,7 @@ Scenario('Counter test', ({ I }) => {
 
   I.see('Count: 15');
 });
+
+Scenario('Long Test counter', async ({ I }) => {
+  I.counterTest();
+});

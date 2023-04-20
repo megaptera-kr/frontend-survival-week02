@@ -8,7 +8,7 @@ module.exports = {
       jsc: {
         parser: {
           syntax: 'typescript',
-          jsx: true,
+          jsx: false,
           decorators: true,
         },
         transform: {

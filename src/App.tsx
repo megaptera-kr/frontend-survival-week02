@@ -1,5 +1,4 @@
-import { useState } from 'react';
-
+import React, { useState, createElement } from 'react';
 import Greeting from './components/Greeting';
 
 type ImageProps = {
@@ -10,7 +9,11 @@ type ImageProps = {
 
 function Image({ src, alt = '', width }: ImageProps) {
   return (
-    <img src={src} alt={alt} width={width ?? 'auto'} />
+    React.createElement('img', {
+      src,
+      alt,
+      width: width ?? 'auto',
+    })
   );
 }
 
@@ -21,21 +24,42 @@ export default function App() {
     setCount(count + value);
   };
 
-  return (
-    <div>
-      <Greeting name="wholeman" />
-      <Image src="/images/test.jpg" alt="Test Image" width={200} />
-      <p>
-        Count:
-        {' '}
-        {count}
-      </p>
-      {[1, 2, 3, 4, 5].map((i) => (
-        <button key={i} type="button" onClick={() => handleClick(i)}>
-          +
-          {i}
-        </button>
-      ))}
-    </div>
+  const ce = React.createElement;
+
+  return createElement(
+    'div',
+    {},
+    ce(Greeting, { name: 'wholeman' }),
+    ce(Image, {
+      src: '/images/test.jpg',
+      alt: 'Test Image',
+      width: 200,
+    }),
+    ce('p', {}, 'Count: ', count),
+    ce('button', {
+      key: 1,
+      type: 'button',
+      onClick: () => handleClick(1),
+    }, '+', 1, ' '),
+    ce('button', {
+      key: 2,
+      type: 'button',
+      onClick: () => handleClick(2),
+    }, '+', 2),
+    ce('button', {
+      key: 3,
+      type: 'button',
+      onClick: () => handleClick(3),
+    }, '+', 3),
+    ce('button', {
+      key: 4,
+      type: 'button',
+      onClick: () => handleClick(4),
+    }, '+', 4),
+    ce('button', {
+      key: 5,
+      type: 'button',
+      onClick: () => handleClick(5),
+    }, '+', 5),
   );
 }

@@ -3,7 +3,7 @@ Feature('Home');
 Scenario('Visit the home page', ({ I }) => {
   I.amOnPage('/');
 
-  I.see('Hello, wholeman!');
+  I.see('Hello, bomee!');
 
   I.seeElement('//img[@alt="Test Image"]');
 });

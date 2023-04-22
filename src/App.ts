@@ -30,36 +30,12 @@ export default function App() {
     'div',
     {},
     ce(Greeting, { name: 'wholeman' }),
-    ce(Image, {
-      src: '/images/test.jpg',
-      alt: 'Test Image',
-      width: 200,
-    }),
+    ce(Image, { src: '/images/test.jpg', alt: 'Test Image', width: 200 }),
     ce('p', {}, 'Count: ', count),
-    ce('button', {
-      key: 1,
+    [1, 2, 3, 4, 5].map((i) => React.createElement('button', {
+      key: i,
       type: 'button',
-      onClick: () => handleClick(1),
-    }, '+', 1, ' '),
-    ce('button', {
-      key: 2,
-      type: 'button',
-      onClick: () => handleClick(2),
-    }, '+', 2),
-    ce('button', {
-      key: 3,
-      type: 'button',
-      onClick: () => handleClick(3),
-    }, '+', 3),
-    ce('button', {
-      key: 4,
-      type: 'button',
-      onClick: () => handleClick(4),
-    }, '+', 4),
-    ce('button', {
-      key: 5,
-      type: 'button',
-      onClick: () => handleClick(5),
-    }, '+', 5),
+      onClick: () => handleClick(i),
+    }, '+', i)),
   );
 }

@@ -7,7 +7,6 @@ function main() {
   if (!container) {
     return;
   }
-
   const root = ReactDOM.createRoot(container);
   root.render(React.createElement(App, {}, null));
 }

@@ -53,9 +53,5 @@
     "parcel-reporter-static-files-copy": "^1.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "main": ".eslintrc.js",
-  "directories": {
-    "test": "tests"
   }
 }

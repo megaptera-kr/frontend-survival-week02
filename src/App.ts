@@ -1,4 +1,4 @@
-import React from React;
+import React from 'react';
 import { useState } from 'react';
 
 import Greeting from './components/Greeting';

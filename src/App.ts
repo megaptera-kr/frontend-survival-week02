@@ -1,5 +1,4 @@
-import { useState } from 'react';
-
+import React, { useState } from 'react';
 import Greeting from './components/Greeting';
 
 type ImageProps = {
@@ -10,7 +9,9 @@ type ImageProps = {
 
 function Image({ src, alt = '', width }: ImageProps) {
   return (
-    <img src={src} alt={alt} width={width ?? 'auto'} />
+    React.createElement('img', { src, alt, width: width ?? 'auto' })
+
+  // <img src={src} alt={alt} width={width ?? 'auto'} />
   );
 }
 
@@ -22,7 +23,16 @@ export default function App() {
   };
 
   return (
-    <div>
+    React.createElement(
+      'div',
+      null,
+      React.createElement(Greeting, { name: 'wholeman' }),
+      React.createElement(Image, { src: '/images/test.jpg', alt: 'Test Image', width: 200 }),
+      React.createElement('p', null, 'Count:', ' ', count),
+      [1, 2, 3, 4, 5].map((i) => React.createElement('button', { key: i, type: 'button', onClick: () => handleClick(i) }, '+', i)),
+    )
+
+  /*     <div>
       <Greeting name="wholeman" />
       <Image src="/images/test.jpg" alt="Test Image" width={200} />
       <p>
@@ -36,6 +46,6 @@ export default function App() {
           {i}
         </button>
       ))}
-    </div>
+    </div> */
   );
 }

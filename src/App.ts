@@ -10,7 +10,7 @@ type ImageProps = {
 
 function Image({ src, alt = '', width }: ImageProps) {
   return (
-    <img src={src} alt={alt} width={width ?? 'auto'} />
+    // <img src={src} alt={alt} width={width ?? 'auto'} />
   );
 }
 

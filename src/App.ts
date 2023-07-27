@@ -9,7 +9,7 @@ type ImageProps = {
 }
 
 function Image({ src, alt = '', width }: ImageProps) {
-  return (React.createElement('img', { src, alt, width: width ?? 'auto' }, null));
+  return (React.createElement('img', { src, alt, width: width ?? 'auto' }));
 }
 
 export default function App() {

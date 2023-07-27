@@ -1,8 +1,6 @@
+import React from 'react';
+
 export default function Greeting({ name }: { name: string }) {
-  return (
-    <p>
-      Hello, Hello, Hello, Hello, Hello, Hello,Hello, Hello, Hello,
-      {name}!
-    </p>
-  );
+  const ce = React.createElement;
+  return ce('p', null, `Hello, ${name}!`);
 }

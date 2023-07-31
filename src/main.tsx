@@ -1,15 +1,23 @@
 import ReactDOM from 'react-dom/client';
+import React from 'react';
 
 import App from './App';
 
+const e = React.createElement;
+
 function main() {
-  const container = document.getElementById('root');
-  if (!container) {
+  const element = document.getElementById('root');
+
+  if (!element) {
     return;
   }
 
-  const root = ReactDOM.createRoot(container);
-  root.render(<App />);
+  const rootElement = ReactDOM.createRoot(element);
+
+  rootElement.render(
+    // children 이 없으면, props null 이 필요가 없구나
+    e(App),
+  );
 }
 
 main();

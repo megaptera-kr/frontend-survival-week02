@@ -3,7 +3,8 @@
       80
   ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
   },
-  "trailing-spaces.trimOnSave": true
+  "trailing-spaces.trimOnSave": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

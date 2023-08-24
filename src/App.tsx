@@ -1,3 +1,5 @@
+import { createElement } from 'react';
+
 import { useState } from 'react';
 
 import Greeting from './components/Greeting';
@@ -22,20 +24,9 @@ export default function App() {
   };
 
   return (
-    <div>
-      <Greeting name="wholeman" />
-      <Image src="/images/test.jpg" alt="Test Image" width={200} />
-      <p>
-        Count:
-        {' '}
-        {count}
-      </p>
-      {[1, 2, 3, 4, 5].map((i) => (
-        <button key={i} type="button" onClick={() => handleClick(i)}>
-          +
-          {i}
-        </button>
-      ))}
-    </div>
-  );
+    createElement('div', null
+    , createElement(Greeting, {name:'wholeman'})
+    , createElement(Image, {src:'/images/test.jpg', alt:'Test Image', width:200})
+    , createElement('p', null, 'Count: ', count)
+    , [1, 2, 3, 4, 5].map((num) => createElement('button', {key:num, type:'button', onClick:() => handleClick(num)}, '+', num))));
 }

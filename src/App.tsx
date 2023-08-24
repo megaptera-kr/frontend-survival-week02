@@ -11,9 +11,7 @@ type ImageProps = {
 }
 
 function Image({ src, alt = '', width }: ImageProps) {
-  return (
-    <img src={src} alt={alt} width={width ?? 'auto'} />
-  );
+  return createElement('img', {src:src, alt:alt, width:(width ?? 'auto')});
 }
 
 export default function App() {
@@ -23,10 +21,9 @@ export default function App() {
     setCount(count + value);
   };
 
-  return (
-    createElement('div', null
-    , createElement(Greeting, {name:'wholeman'})
-    , createElement(Image, {src:'/images/test.jpg', alt:'Test Image', width:200})
-    , createElement('p', null, 'Count: ', count)
-    , [1, 2, 3, 4, 5].map((num) => createElement('button', {key:num, type:'button', onClick:() => handleClick(num)}, '+', num))));
+  return createElement('div', null,
+    createElement(Greeting, {name:'wholeman'}),
+    createElement(Image, {src:'/images/test.jpg', alt:'Test Image', width:200}),
+    createElement('p', null, 'Count: ', count),
+    [1, 2, 3, 4, 5].map((num) => createElement('button', {key:num, type:'button', onClick:() => handleClick(num)}, '+', num)));
 }

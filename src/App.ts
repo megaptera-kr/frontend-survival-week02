@@ -35,17 +35,15 @@ export default function App() {
       width: 200,
     }),
     React.createElement('p', null, 'Count: ', count),
-    [1, 2, 3, 4, 5].map((i) =>
-      React.createElement(
-        'button',
-        {
-          key: i,
-          type: 'button',
-          onClick: () => handleClick(i),
-        },
-        '+',
-        i
-      )
-    )
+    [1, 2, 3, 4, 5].map((i) => React.createElement(
+      'button',
+      {
+        key: i,
+        type: 'button',
+        onClick: () => handleClick(i),
+      },
+      '+',
+      i,
+    )),
   );
 }

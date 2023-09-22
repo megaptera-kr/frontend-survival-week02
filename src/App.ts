@@ -12,7 +12,7 @@ function Image({ src, alt = '', width }: ImageProps) {
   return React.createElement('img', {
     src,
     alt,
-    width: width !== null && width !== void 0 ? width : 'auto',
+    width: width !== null && width !== undefined ? width : 'auto',
   });
 }
 
@@ -35,15 +35,17 @@ export default function App() {
       width: 200,
     }),
     React.createElement('p', null, 'Count: ', count),
-    [1, 2, 3, 4, 5].map((i) => React.createElement(
-      'button',
-      {
-        key: i,
-        type: 'button',
-        onClick: () => handleClick(i),
-      },
-      '+',
-      i,
-    )),
+    [1, 2, 3, 4, 5].map((i) =>
+      React.createElement(
+        'button',
+        {
+          key: i,
+          type: 'button',
+          onClick: () => handleClick(i),
+        },
+        '+',
+        i
+      )
+    )
   );
 }

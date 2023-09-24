@@ -44,16 +44,4 @@ export default function App() {
       i,
     )),
   );
-  // return (
-  //   <div>
-  //     <Greeting name="wholeman" />
-  //     <Image src="/images/test.jpg" alt="Test Image" width={200} />
-  //     <p>Count: {count}</p>
-  //     {[1, 2, 3, 4, 5].map((i) => (
-  //       <button key={i} type="button" onClick={() => handleClick(i)}>
-  //         +{i}
-  //       </button>
-  //     ))}
-  //   </div>
-  // );
 }

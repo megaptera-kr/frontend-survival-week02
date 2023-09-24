@@ -11,8 +11,8 @@ function main() {
 
   const root = ReactDOM.createRoot(container);
   root.render(
-    React.createElement(App, null, null)
-    );
+    React.createElement(App, null),
+  );
 }
 
 main();

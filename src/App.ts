@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import Greeting from './components/Greeting';
 
 type ImageProps = {
-	src: string;
-	alt?: string;
-	width?: number;
+    src: string;
+    alt?: string;
+    width?: number;
 }
 
 function Image({ src, alt = '', width }: ImageProps) {

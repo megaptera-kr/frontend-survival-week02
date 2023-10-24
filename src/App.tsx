@@ -21,7 +21,7 @@ export default function App() {
     setCount(count + value);
   };
 
-  const buttonList = [1, 2, 3, 4, 5].map((i) => (createElement('button', { type: 'button', onClick: () => handleClick(i) }, `+${i}`)));
+  const buttonList = [1, 2, 3, 4, 5].map((i) => (createElement('button', { type: 'button', key: `buttonNumber${i}`, onClick: () => handleClick(i) }, `+${i}`)));
 
   return createElement(
     'div',

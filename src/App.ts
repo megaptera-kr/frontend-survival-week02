@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-import React from 'react';
 import Greeting from './components/Greeting';
 
 type ImageProps = {
@@ -11,8 +10,8 @@ type ImageProps = {
 
 function Image({ src, alt = '', width }: ImageProps) {
   const Img = React.createElement('img', {
-    src: src,
-    alt: alt,
+    src,
+    alt,
     width: width ?? 'auto',
   });
   return Img;
@@ -35,19 +34,17 @@ export default function App() {
       width: 200,
     }),
     React.createElement('p', null, 'Count: ', count),
-    [1, 2, 3, 4, 5].map((i) =>
-      React.createElement(
-        'button',
-        {
-          key: i,
-          type: 'button',
-          onClick: () => handleClick(i),
-        },
+    [1, 2, 3, 4, 5].map((i) => React.createElement(
+      'button',
+      {
+        key: i,
+        type: 'button',
+        onClick: () => handleClick(i),
+      },
 
-        '+',
-        i
-      )
-    )
+      '+',
+      i,
+    )),
   );
 
   // return (

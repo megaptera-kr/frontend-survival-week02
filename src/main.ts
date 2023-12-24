@@ -10,7 +10,7 @@ function main() {
   }
 
   const root = ReactDOM.createRoot(container);
-  root.render(App2());
+  root.render(React.createElement(App2, null, null));
 }
 
 main();

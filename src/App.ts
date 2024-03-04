@@ -31,13 +31,11 @@ export default function App() {
       width: 200,
     }),
     element('p', null, 'Count: ', count),
-    [1, 2, 3, 4, 5].map((i) =>
-      element(
-        'button',
-        { key: i, type: 'button', onClick: () => handleClick(i) },
-        `+${i}`
-      )
-    )
+    [1, 2, 3, 4, 5].map((i) => element(
+      'button',
+      { key: i, type: 'button', onClick: () => handleClick(i) },
+      `+${i}`,
+    )),
   );
 }
 

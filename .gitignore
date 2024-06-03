@@ -132,3 +132,9 @@ dist
 # SWC
 /.swc/
 node_modules
+
+# IDEA
+.idea/
+
+# CodeceptJS
+output/

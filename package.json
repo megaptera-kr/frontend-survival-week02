@@ -15,7 +15,8 @@
     "codeceptjs": "codeceptjs run --steps",
     "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
     "codeceptjs:ui": "codecept-ui --app",
-    "ci": "concurrently -s first -k 'npm:serve' 'npm:codeceptjs'"
+    "ci": "concurrently -s first -k 'npm:serve' 'npm:codeceptjs'",
+    "ci:local": "npm run lint & npx tsc --noEmit & npm run test & npm run build & npm run ci"
   },
   "keywords": [],
   "author": "wholeman",
